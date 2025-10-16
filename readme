@@ -1,1 +1,26 @@
-学习工具
+# 学习工具：Codex 使用指南
+
+Codex 是 OpenAI 提供的代码生成模型，可以帮助你快速编写和理解代码。下面是一些使用 Codex 的基本步骤：
+
+1. **选择接口**：
+   - 在 OpenAI 平台上申请 Codex 相关的 API Key。
+   - 或者在支持 Codex 的 IDE 插件（例如 VS Code 的 Copilot）中登录。
+
+2. **设置环境**：
+   - 安装官方 SDK（如 `openai` Python 包）并配置环境变量 `OPENAI_API_KEY`。
+   - 如果使用命令行，可以通过 `pip install openai` 安装依赖。
+
+3. **编写请求**：
+   - 调用 `openai.Completion.create` 或者新版的 `openai.responses.create` 接口，提供提示（prompt）和参数，例如模型名称（如 `gpt-4.1-mini` 或更新的 Codex 系列模型）。
+   - 设置温度、最大 token 数等参数来控制输出。
+
+4. **集成到工作流**：
+   - 在 IDE 中直接使用智能补全和重构功能。
+   - 在自动化脚本或应用中，将 Codex 作为后端服务来生成代码、测试用例或文档。
+
+5. **注意事项**：
+   - 审核 Codex 输出的代码，确保安全性和正确性。
+   - 遵守 OpenAI 的使用政策和速率限制。
+   - 对敏感数据进行脱敏处理后再提交给模型。
+
+通过以上步骤，你就可以开始使用 Codex 来提升开发效率。
