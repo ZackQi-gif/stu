@@ -1,1 +1,23 @@
 学习工具
+
+## SFTP 上传下载工具
+
+`sftp_tool.py` 提供了一个统一的命令行界面，可以通过 SFTP 上传或下载文件与目录。
+
+### 安装依赖
+
+```bash
+pip install paramiko
+```
+
+### 使用示例
+
+```bash
+# 上传本地文件到服务器
+python sftp_tool.py upload ./local/file.txt /remote/path/file.txt --host example.com --username user --password secret
+
+# 从服务器下载目录到本地
+python sftp_tool.py download ./downloads /remote/path/data --host example.com --username user --private-key ~/.ssh/id_rsa
+```
+
+也可以通过 `--config` 选项提供一个 JSON 配置文件，里面包含 `host`、`username` 等连接参数，命令行参数会覆盖配置文件中的值。
